@@ -27,7 +27,7 @@ jobs:
         cd frontend && flutter build apk --release
     
     - name: Upload APK artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: android-apk
         path: frontend/build/app/outputs/flutter-apk/app-release.apk
@@ -55,7 +55,7 @@ jobs:
         cd backend && docker build -t cardly-backend .
     
     - name: Upload backend artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: backend-build
         path: backend/build/libs 
